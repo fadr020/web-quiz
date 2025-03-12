@@ -252,7 +252,7 @@ header {
     }
 }
 
-@media screen and (max-height: 275px){
+@media screen and (max-height: 255px){
     .button {
         position: absolute;
         top: 190%;
