@@ -252,7 +252,7 @@ header {
     }
 }
 
-@media screen and (max-height: 255px){
+@media screen and (max-height: 275px){
     .button {
         position: absolute;
         top: 190%;
@@ -281,3 +281,32 @@ header {
     }
 }
 
+
+@media screen and (max-height: 579px){
+    .button {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.7);
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 15px 25px;
+        cursor: pointer;
+        border-radius: 30px;
+        font-size: 18px;
+    }
+
+    p {
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(214, 209, 219);
+        font-size: 20px;
+    }
+
+    nav a {
+        display: flex;
+    }
+}
