@@ -1,0 +1,255 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-nav: rgb(219, 219, 245);
+    --color-primary: 222;
+}
+
+.index{
+    background-color: var(--bg-nav);
+}
+nav {
+    background-color: var(--bg-nav);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: var(--color-primary);
+}
+
+nav-bot {
+    padding: 10px;
+    color: var(--color-primary);
+    width: 100%;
+    cursor: pointer;
+}
+
+nav-bot-1 {
+    padding: 10px;
+    color: var(--color-primary);
+    width: 100%;
+    cursor: pointer;
+}
+
+.home, .mode{
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: 222;
+    font-size: 25px;
+}
+
+.home:hover, .mode:hover {
+    color:gray;
+    transform: ease-in-out .5s;
+}
+
+.judul {
+    position: fixed;
+    left: 0;
+    margin-left: 30px;
+    font-family: "Rock Salt", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.items-center{
+    justify-content: center;
+}
+
+.gap {
+    display: flex;
+    gap: 50px;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(214, 209, 219);
+    font-size: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Efek fade */
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+header {
+    position: fixed; /* Menjadikan header tetap di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-nav); /* Bisa disesuaikan */
+    padding: 10px 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan agar terlihat lebih elegan */
+    z-index: 1000; 
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.soal {
+    font-weight: 800;
+}
+
+@media screen and (max-width: 618px) and (orientation: portrait) {
+    .rotate-warning {
+        display: flex; /* Muncul saat portrait dengan lebar <= 618px */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        z-index: 9999;
+    }
+
+    .rotate-icon {
+        width: 100px;
+        height: 100px;
+        background: url('https://cdn-icons-png.flaticon.com/512/1827/1827415.png') no-repeat center;
+        background-size: contain;
+        animation: rotate-phone 2s infinite ease-in-out;
+    }
+
+    @keyframes rotate-phone {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(15deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(-15deg); }
+        100% { transform: rotate(0deg); }
+    }
+}
+
+@media screen and (min-width: 619px), (orientation: landscape) {
+    .rotate-warning {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width : 619px) {
+    .judul {
+        display: none;
+    }
+
+    nav a {
+        display: flex;
+    }
+}
+
+@media screen and (max-height : 1000px) {
+    .judul {
+        font-size: 20px;
+    }
+
+    nav a {
+        display: flex;
+    }
+}
+
+@media screen and (max-height: 312px){
+    .button {
+        position: absolute;
+        top: 105%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.7);
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 15px 25px;
+        cursor: pointer;
+        border-radius: 30px;
+        font-size: 18px;
+    }
+
+    p {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(214, 209, 219);
+        font-size: 20px;
+    }
+
+    nav a {
+        display: flex;
+    }
+}

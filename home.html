@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Rock+Salt&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="text-center">
+            <a class="judul">QUIZ WEB FDR</a>
+            <div class="gap">
+                <a href="index.html" class="home">Home</a>
+            </div>
+        </nav>
+    </header>
+    <content>
+        <div>
+            <div class="slideshow-container">
+                <!-- Gambar 1 -->
+                <img class="slide fade" src="assets/images/gambar1.jpg" alt="Gambar 1">
+                <!-- Gambar 2 -->
+                <img class="slide fade" src="assets/images/gambar2.jpg" alt="Gambar 2">
+                <!-- Gambar 3 -->
+                <img class="slide fade" src="assets/images/gambar3.jpg" alt="Gambar 3">
+
+                <!-- Tombol Prev & Next -->
+                <button class="prev" onclick="plusSlides(-1)">❮</button>
+                <button class="next" onclick="plusSlides(1)">❯</button>
+            </div>
+            <div class="text-center margin-top">
+                <p1 class="soal">Soal</p1>
+                <br>
+                <br>
+                <p1">Siapa yang paling ganteng dari 3 foto diatas</p1>
+                <br>
+                <br>
+                <input placeholder="Nama Lengkap" id="jawaban">
+                <button onclick="enter()">Enter</button>
+                <br>
+                <br>
+                <button class="clueee" onclick="clue()" id="buttonClue">Clue</button>
+                <br>
+                <br>
+                <p1 id="cluee">Clue : Celana Coklat</p1>
+                <br>
+                <a href="index.html" target="_blank" id="link">link dana kaget</a>
+            </div>
+        </div>
+
+        <div class="rotate-warning">
+            <div class="rotate-icon"></div>
+            🔄 **Putar perangkat ke lanskap untuk melanjutkan!**
+        </div>
+        
+        <nav-bot>
+            <a class="mode" onclick="mode2()">MODE</a>
+        </nav-bot>
+        <script src="data.js" type="application/javascript"></script>
+</body>
+
+</html>
